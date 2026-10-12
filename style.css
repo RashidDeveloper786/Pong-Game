@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 3px;
+}
+
+.game-info {
+    width: 100%;
+    max-width: 800px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.player-score,
+.computer-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-score p:first-child,
+.computer-score p:first-child {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.player-score p:last-child,
+.computer-score p:last-child {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+.divider {
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+#gameCanvas {
+    background-color: #0a0e27;
+    border: 3px solid #ffeb3b;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.instructions {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+}
+
+.instructions h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.instructions p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .score {
+        padding: 15px;
+    }
+    
+    .player-score p:last-child,
+    .computer-score p:last-child {
+        font-size: 2rem;
+    }
+}
